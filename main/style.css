@@ -169,7 +169,7 @@ button:hover {
     grid-row: 3 / 4;
     display: grid;
     grid-template-rows: auto auto auto;
-    justify-items: center;
+    justify-items: start;
     align-items: center;
     text-align: center;
   }
