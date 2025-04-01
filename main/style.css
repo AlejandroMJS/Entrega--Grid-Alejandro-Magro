@@ -4,7 +4,6 @@ body, html {
   padding: 0;
   background-color: #f3f3f3;
   font-family: Arial, sans-serif;
-  display: flex;
   justify-content: center;
 }
 
@@ -12,7 +11,7 @@ body, html {
   display: grid;
   grid-template-rows: auto;
   max-width: 400px; 
-  width: 100%;
+  min-width: 90vw;
   gap: 15px; 
   padding: 20px;
 }
@@ -118,7 +117,7 @@ button:hover {
 
 @media (min-width: 900px) {
   .container {
-    max-width: 100vw;
+    max-width: 97vw;
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     grid-template-rows: auto auto auto;
@@ -130,7 +129,7 @@ button:hover {
   .blue {
     grid-column: 1 / 2;
     grid-row: 1 / 3;
-    height: 100vh;
+    height: 100.5vh;
   }
 
   /* Primera imagen (mochila) */
@@ -168,6 +167,28 @@ button:hover {
   .orange {
     grid-column: 2 / 4;
     grid-row: 3 / 4;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Ajuste del título */
+  .orange h2 {
+    margin: 0;
+    align-self: start; /* Alinea el título al principio (arriba) */
+  }
+
+  /* Ajuste del párrafo */
+  .orange p {
+    margin: 10px 0;
+    align-self: center; /* Alinea el párrafo en el centro */
+  }
+
+  /* Ajuste del botón */
+  .orange button {
+    align-self: end; /* Alinea el botón al final (debajo del párrafo) */
   }
 
   /* Ajustar imágenes */
@@ -176,14 +197,5 @@ button:hover {
     height: 100%;
     object-fit: cover;
     display: block;
-  }
-
-  /* Asegurar que los bloques ocupen todo su espacio */
-  .text-block {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
   }
 }
